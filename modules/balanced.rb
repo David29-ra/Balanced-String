@@ -1,9 +1,15 @@
 # Module with the function to check if a string is balanced
 
 module Balanced
-  def its_balanced?(string)
-    string = string.gsub(/(:\(|:\)|[a-z]| |:|\([a-z]*:[a-z]*\))/, "")
-    valid_braces(string) ? "Balanceado" : "Desbalanceado"
+  def balanced_or_not_present
+    message = receive_string
+    print "El mensaje es : "
+    puts its_balanced?(message)
+  end
+
+  def its_balanced?(message)
+    message = message.gsub(/(:\(|:\)|[a-z]| |:|\([a-z]*:[a-z]*\))/, "")
+    valid_braces(message) ? "Balanceado" : "Desbalanceado"
   end
 
   def valid_braces(braces)
