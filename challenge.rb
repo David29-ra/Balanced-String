@@ -16,7 +16,7 @@ class Challenge
     until action == "exit"
       action = select_action
       case action
-      when "test" then balanced_or_not_present
+      when "test" then balanced_or_not
       end
     end
     puts say_goodbye
